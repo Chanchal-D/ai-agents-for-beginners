@@ -50,7 +50,7 @@ Here are some strategies to manage the costs of deploying AI Agents to productio
 
 - **Using Smaller Models** - Small Language Models (SLMs) can perform well on certain agentic use-cases and will reduce costs significantly. As mentioned earlier, building an evaluation system to determine and compare performance vs larger models is the best way to understand how well an SLM will perform on your use case.
 
-- **Using a Router Model** - A similar strategy is to use a diversity of models and sizes. You can use an LLM/SLM or serverless function to route requests based on complexity to the best fit models. This will also help reduce costs while also ensuring performance on the right tasks.
+- **Using a Router Model** - A similar strategy is to use a diversity of models and sizes. You can use an LLM/SLM or serverless function to route requests based on complexity to the best-fit models. This will also help reduce costs while also ensuring performance on the right tasks.
 
 ## Congratulations  
 
