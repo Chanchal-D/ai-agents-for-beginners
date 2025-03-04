@@ -14,7 +14,7 @@ After completing this lesson, you'll be able to:
 
 ## Introduction to Metacognition
 
-Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences. Metacognition, or "thinking about thinking," is an important concept in the development of agentic AI systems. It involves AI systems being aware of their own internal processes and being able to monitor, regulate, and adapt their behavior accordingly. Much like we do when we read the room or look at a problem.  This self-awareness can help AI systems make better decisions, identify errors, and improve their performance over time- again linking back to the Turing test and the debate over whether AI is going to take over.
+Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences. Metacognition, or "thinking about thinking," is an important concept in the development of agentic AI systems. It involves AI systems being aware of their own internal processes and being able to monitor, regulate, and adapt their behaviour accordingly. Much like we do when we read the room or look at a problem.  This self-awareness can help AI systems make better decisions, identify errors, and improve their performance over time- again linking back to the Turing test and the debate over whether AI is going to take over.
 
 In the context of agentic AI systems, metacognition can help address several challenges, such as:
 - Transparency: Ensuring that AI systems can explain their reasoning and decisions.
@@ -53,11 +53,11 @@ Before diving into metacognitive processes, it's essential to understand the bas
 These components work together to create an "expertise unit" that can perform specific tasks.
 
 **Example**:
-Consider a travel agent, agent services that not only plans your holiday but also adjusts its path based on real-time data and past customer journey experiences.
+Consider a travel agent, agent services that not only plan your holiday but also adjust its path based on real-time data and past customer journey experiences.
 
 ### Example: Metacognition in a Travel Agent Service
 
-Imagine you're designing a travel agent service powered by AI. This agent, "Travel Agent," assists users with planning their vacations. To incorporate metacognition, Travel Agents needs to evaluate and adjust its actions based on self-awareness and past experiences. Here's how metacognition could play a role:
+Imagine you're designing a travel agent service powered by AI. This agent, "Travel Agent," assists users with planning their vacations. To incorporate metacognition, Travel Agents needs to evaluate and adjust their actions based on self-awareness and past experiences. Here's how metacognition could play a role:
 
 #### Current Task
 
@@ -78,11 +78,11 @@ The current task is to help a user plan a trip to Paris.
 
 #### Experience and Self-Reflection
 
-Travel Agent uses metacognition to evaluate its performance and learn from past experiences. For example:
+Travel Agent uses metacognition to evaluate their performance and learn from past experiences. For example:
 
 1. **Analyzing User Feedback**: Travel Agent reviews user feedback to determine which recommendations were well-received and which were not. It adjusts its future suggestions accordingly.
-2. **Adaptability**: If a user has previously mentioned a dislike for crowded places, Travel Agent will avoid recommending popular tourist spots during peak hours in the future.
-3. **Error Correction**: If Travel Agent made an error in a past booking, such as suggesting a hotel that was fully booked, it learns to check availability more rigorously before making recommendations.
+2. **Adaptability**: If a user has previously mentioned a dislike for crowded places, the Travel Agent will avoid recommending popular tourist spots during peak hours in the future.
+3. **Error Correction**: If a Travel Agent made an error in a past booking, such as suggesting a hotel that was fully booked, it learns to check availability more rigorously before making recommendations.
 
 #### Practical Developer Example
 
@@ -142,7 +142,7 @@ By incorporating metacognition, Travel Agent can provide more personalized and a
 
 ## 2. Planning in Agents
 
-Planning is a critical component of AI agent behavior. It involves outlining the steps needed to achieve a goal, considering the current state, resources, and possible obstacles.
+Planning is a critical component of AI agent behaviour. It involves outlining the steps needed to achieve a goal, considering the current state, resources, and possible obstacles.
 
 ### Elements of Planning
 
@@ -220,7 +220,7 @@ class Travel_Agent:
         self.experience_data.append(feedback)
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage within a booing request
+# Example usage within a booking request
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -237,7 +237,7 @@ travel_agent.adjust_based_on_feedback(feedback)
 
 ## 3. Corrective RAG System
 
-Firstly let's start by understanding the difference between RAG Tool and Pre-emptive Context Load
+Firstly let's start by understanding the difference between the RAG Tool and the Pre-emptive Context Load
 
 ![RAG vs Context Loading](./images/rag-vs-context.png)
 
@@ -265,7 +265,7 @@ Consider a search agent that retrieves information from the web to answer user q
 
 ### Corrective RAG in Travel Agent
 
-Corrective RAG (Retrieval-Augmented Generation) enhances an AI's ability to retrieve and generate information while correcting any inaccuracies. Let's see how Travel Agent can use the Corrective RAG approach to provide more accurate and relevant travel recommendations.
+Corrective RAG (Retrieval-Augmented Generation) enhances an AI's ability to retrieve and generate information while correcting any inaccuracies. Let's see how Travel Agents can use the Corrective RAG approach to provide more accurate and relevant travel recommendations.
 
 This involves:
 
@@ -433,7 +433,7 @@ print(travel_agent.get_destination_info("Tokyo"))
 
 2. **Retrieving Information (`get_destination_info` method)**: When a user queries about a specific destination, the `get_destination_info` method fetches the relevant information from the pre-loaded context dictionary.
 
-By pre-loading the context, the travel agent application can quickly respond to user queries without having to retrieve this information from an external source in real-time. This makes the application more efficient and responsive.
+By pre-loading the context, the travel agent application can quickly respond to user queries without having to retrieve this information from an external source in real time. This makes the application more efficient and responsive.
 
 ### Bootstrapping the Plan with a Goal Before Iterating
 
@@ -580,8 +580,7 @@ class TravelAgent:
             "temperature": 0.7
         }
         
-        # Call the Azure OpenAI API to get the re-ranked and scored destinations
-        response = requests.post(endpoint, headers=headers, json=payload)
+        # Call the Azure OpenAI API to get the response of the re-ranked and scored destination = requests.post(endpoint, headers=headers, json=payload)
         response_data = response.json()
         
         # Extract and return the recommendations
@@ -626,7 +625,7 @@ for rec in recommendations:
 
 4. **API Call**: The `requests` library is used to make an HTTP POST request to the Azure OpenAI API endpoint. The response contains the re-ranked and scored destinations.
 
-5. **Example Usage**: The travel agent collects user preferences (e.g., interest in sightseeing and diverse culture) and uses the Azure OpenAI service to get re-ranked and scored recommendations for travel destinations.
+5. **Example Usage**: The travel agent collects user preferences (e.g., interest in sightseeing and diverse culture) and uses the Azure OpenAI service to get re-ranked and score recommendations for travel destinations.
 
 Make sure to replace `your_azure_openai_api_key` with your actual Azure OpenAI API key and `https://your-endpoint.com/...` with the actual endpoint URL of your Azure OpenAI deployment.
 
@@ -634,7 +633,7 @@ By leveraging the LLM for re-ranking and scoring, the travel agent can provide m
 
 ### RAG: Prompting Technique vs Tool
 
-Retrieval-Augmented Generation (RAG) can be both a prompting technique and a tool in the development of AI agents. Understanding the distinction between the two can help you leverage RAG more effectively in your projects.
+Retrieval-augmented generation (RAG) can be both a prompting technique and a tool in the development of AI agents. Understanding the distinction between the two can help you leverage RAG more effectively in your projects.
 
 #### RAG as a Prompting Technique
 
@@ -651,7 +650,7 @@ Retrieval-Augmented Generation (RAG) can be both a prompting technique and a too
 **Example in Travel Agent**:
 
 - User Input: "I want to visit museums in Paris."
-- Prompt: "Find top museums in Paris."
+- Prompt: "Find the top museums in Paris."
 - Retrieved Information: Details about Louvre Museum, Musée d'Orsay, etc.
 - Generated Response: "Here are some top museums in Paris: Louvre Museum, Musée d'Orsay, and Centre Pompidou."
 
@@ -715,7 +714,7 @@ print("Top Museums in Paris:", museums)
 
 ### Evaluating Relevancy
 
-Evaluating relevancy is a crucial aspect of AI agent performance. It ensures that the information retrieved and generated by the agent is appropriate, accurate, and useful to the user. Let's explore how to evaluate relevancy in AI agents, including practical examples and techniques.
+Evaluating relevancy is a crucial aspect of AI agent performance. It ensures that the information retrieved and generated by the agent is appropriate, accurate, and useful to the user. Let's explore how to evaluate the relevancy of AI agents, including practical examples and techniques.
 
 #### Key Concepts in Evaluating Relevancy
 
@@ -790,7 +789,7 @@ Evaluating relevancy is a crucial aspect of AI agent performance. It ensures tha
 
 #### Example: Evaluating Relevancy in Travel Agent
 
-Here's a practical example of how Travel Agent can evaluate the relevancy of travel recommendations:
+Here's a practical example of how a Travel Agent can evaluate the relevancy of travel recommendations:
 
 ```python
 class Travel_Agent:
@@ -903,7 +902,7 @@ Let's take Travel Agent as an example to see how searching with intent can be im
 
    ```python
    def analyze_context(query, user_history):
-       # Combine current query with user history to understand context
+       # Combine current query with user history to understand the context
        context = {
            "current_query": query,
            "user_history": user_history
@@ -966,7 +965,7 @@ Let's take Travel Agent as an example to see how searching with intent can be im
 
 ## 4. Generating Code as a Tool
 
-Code generating agents use AI models to write and execute code, solving complex problems and automating tasks.
+Code-generating agents use AI models to write and execute code, solving complex problems and automating tasks.
 
 ### Code Generating Agents
 
@@ -980,7 +979,7 @@ Code generating agents use generative AI models to write and execute code. These
 
 #### Example: Code Generating Agent for Data Analysis
 
-Imagine you're designing a code generating agent. Here's how it might work:
+Imagine you're designing a code-generating agent. Here's how it might work:
 
 1. **Task**: Analyze a dataset to identify trends and patterns.
 2. **Steps**:
@@ -993,7 +992,7 @@ Imagine you're designing a code generating agent. Here's how it might work:
 
 ### Example: Code Generating Agent for Travel Agent
 
-In this example, we'll design a code generating agent, Travel Agent, to assist users in planning their travel by generating and executing code. This agent can handle tasks such as fetching travel options, filtering results, and compiling an itinerary using generative AI.
+In this example, we'll design a code-generating agent, Travel Agent, to assist users in planning their travel by generating and executing code. This agent can handle tasks such as fetching travel options, filtering results, and compiling an itinerary using generative AI.
 
 #### Overview of the Code Generating Agent
 
@@ -1044,7 +1043,7 @@ In this example, we'll design a code generating agent, Travel Agent, to assist u
 
    ```python
    def execute_code(code):
-       # Execute the generated code using exec
+       # Execute the generated code using the exec
        exec(code)
        result = locals()
        return result
@@ -1128,7 +1127,7 @@ def adjust_based_on_feedback(feedback, preferences, schema):
         preferences["favorites"] = feedback["liked"]
     if "disliked" in feedback:
         preferences["avoid"] = feedback["disliked"]
-    # Reasoning based on schema to adjust other related preferences
+    # Reasoning based on the schema to adjust other related preferences
     for field in schema:
         if field in preferences:
             preferences[field] = adjust_based_on_environment(feedback, field, schema)
@@ -1182,13 +1181,13 @@ print("Updated Itinerary:", updated_itinerary)
 
 #### Explanation - Booking Based on Feedback
 
-1. **Schema Awareness**: The `schema` dictionary defines how preferences should be adjusted based on feedback. It includes fields like `favorites` and `avoid`, with corresponding adjustments.
+1. **Schema Awareness**: The `schema` dictionary defines how preferences should be adjusted based on feedback. It includes fields like `favourites` and `avoid`, with corresponding adjustments.
 2. **Adjusting Preferences (`adjust_based_on_feedback` method)**: This method adjusts preferences based on user feedback and the schema.
 3. **Environment-Based Adjustments (`adjust_based_on_environment` method)**: This method customizes the adjustments based on the schema and feedback.
 4. **Generating and Executing Queries**: The system generates code to fetch updated flight and hotel data based on the adjusted preferences and simulates the execution of these queries.
 5. **Generating Itinerary**: The system creates an updated itinerary based on the new flight, hotel, and attraction data.
 
-By making the system environment-aware and reasoning based on the schema, it can generate more accurate and relevant queries, leading to better travel recommendations and a more personalized user experience.
+By making the system environment aware and reasoning based on the schema, it can generate more accurate and relevant queries, leading to better travel recommendations and a more personalized user experience.
 
 ### Using SQL as a Retrieval-Augmented Generation (RAG) Technique
 
@@ -1318,16 +1317,16 @@ A data analysis agent:
 
 By leveraging SQL as part of the Retrieval-Augmented Generation (RAG) technique, AI agents like Travel Agent can dynamically retrieve and utilize relevant data to provide accurate and personalized recommendations. 
 
-### Example of Metacongition 
+### Example of Metacognition 
 
-So to demonstrate an implementation of metacongition, let's create a simple agent that *reflects on its decision-making process* while solving a problem. For this example, we'll build a system where an agent tries to optimize the choice of a hotel, but then evaluates its own reasoning and adjusts its strategy when it makes errors or suboptimal choices.
+So to demonstrate an implementation of metacognition, let's create a simple agent that *reflects on its decision-making process* while solving a problem. For this example, we'll build a system where an agent tries to optimize the choice of a hotel, but then evaluates its own reasoning and adjusts its strategy when it makes errors or suboptimal choices.
 
 We'll simulate this using a basic example where the agent selects hotels based on a combination of price and quality, but it will "reflect" on its decisions and adjust accordingly. 
 
 #### How this illustrates metacognition:
 
 1. **Initial Decision**: The agent will pick the cheapest hotel, without understanding the quality impact.
-2. **Reflection and Evaluation**: After the initial choice, the agent will check whether the hotel is a "bad" choice using user feedback. If it finds that the hotel’s quality was too low, it reflects on its reasoning.
+2. **Reflection and Evaluation**: After the initial choice, the agent will check whether the hotel is a "bad" choice using user feedback. If it finds that the hotel’s quality is too low, it reflects on its reasoning.
 3. **Adjusting Strategy**: The agent adjusts its strategy based on its reflection switches from "cheapest" to "highest_quality", thus improving its decision-making process in future iterations.
 
 Here's an example:
@@ -1377,7 +1376,7 @@ class HotelRecommendationAgent:
         """
         Simulate user feedback based on hotel attributes.
         For simplicity, assume if the hotel is too cheap, the feedback is "bad".
-        If the hotel has quality less than 7, feedback is "bad".
+        If the hotel has a quality of less than 7, feedback is "bad".
         """
         if hotel['price'] < 100 or hotel['quality'] < 7:
             return "bad"
