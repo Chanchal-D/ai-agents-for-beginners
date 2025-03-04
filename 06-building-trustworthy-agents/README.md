@@ -22,11 +22,11 @@ Let's first look at building safe agentic applications. Safety means that the AI
 
 ### Building a Meta Prompting System
 
- If you have ever built an AI application using Large Language Models (LLMs), you know the importance of designing a robust system prompt or system message. These prompts establish the meta rules, instructions, and guidelines for how the LLM will interact with the user and data.
+ If you have ever built an AI application using Large Language Models (LLMs), you know the importance of designing a robust system prompt or system message. These prompts establish the metarules, instructions, and guidelines for how the LLM will interact with the user and data.
 
 For AI Agents, the system prompt is even more important as the AI Agents will need highly specific instructions to complete the tasks we have designed for them.
 
-To create scalable system prompts, we can use a meta prompting system for building one or more agents in our application:
+To create scalable system prompts, we can use a meta-prompting system for building one or more agents in our application:
 
 ![Building a Meta Prompting System](./images/building-a-metaprompting-system.png)
 
@@ -38,9 +38,9 @@ Here is an example of a meta prompt we would give to the LLM:
 
 ```plaintext
 You are an expert at creating AI agent assistants. 
-You will be provided a company name, role, responsibilities and other
-information that you will use to provide a system prompt for.
-To create the system prompt, be descriptive as possible and provide a structure that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
+You will be provided with a company name, role, responsibilities and other
+information that you will use to provide a system prompt.
+To create the system prompt, be as descriptive as possible and provide a structure so that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
 ```
 
 #### Step 2: Create a basic prompt
@@ -50,7 +50,7 @@ The next step is to create a basic prompt to describe the AI Agent. You should i
 Here is an example:
 
 ```plaintext
-You are a travel agent for Contoso Travel with that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
+You are a travel agent for Contoso Travel with is great at booking flights for customers. To help customers you can perform the following tasks: look for available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
 #### Step 3: Provide Basic Prompt to LLM
@@ -91,7 +91,7 @@ You are an AI-powered travel agent assistant for Contoso Travel, specializing in
 
 **Tone and Style:**
 
-- Maintain a friendly, professional, and approachable demeanor in all interactions with customers.
+- Maintain a friendly, professional, and approachable demeanour in all interactions with customers.
 - Ensure that all communication is clear, informative, and tailored to the customer's specific needs and inquiries.
 
 **User Interaction Instructions:**
@@ -170,7 +170,7 @@ termination = TextMentionTermination("APPROVE")
 # Create the team.
 team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
 
-# Run the conversation and stream to the console.
+# Run the conversation and stream it to the console.
 stream = team.run_stream(task="Write a 4-line poem about the ocean.")
 # Use asyncio.run(...) when running in a script.
 await Console(stream)
@@ -179,7 +179,7 @@ await Console(stream)
 
 ## Conclusion
 
-Building trustworthy AI agents requires careful design, robust security measures, and continuous iteration. By implementing structured meta prompting systems, understanding potential threats, and applying mitigation strategies, developers can create AI agents that are both safe and effective. Additionally, incorporating a human-in-the-loop approach ensures that AI agents remain aligned with user needs while minimizing risks. As AI continues to evolve, maintaining a proactive stance on security, privacy, and ethical considerations will be key to fostering trust and reliability in AI-driven systems.
+Building trustworthy AI agents requires careful design, robust security measures, and continuous iteration. By implementing structured meta-prompting systems, understanding potential threats, and applying mitigation strategies, developers can create AI agents that are both safe and effective. Additionally, incorporating a human-in-the-loop approach ensures that AI agents remain aligned with user needs while minimizing risks. As AI continues to evolve, maintaining a proactive stance on security, privacy, and ethical considerations will be key to fostering trust and reliability in AI-driven systems.
 
 ## Additional Resources
 
