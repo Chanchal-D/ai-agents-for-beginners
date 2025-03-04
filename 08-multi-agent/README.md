@@ -1,4 +1,4 @@
-# Multi agent design patterns
+# Multi-agent design patterns
 
 As soon as you start working on a project that involves multiple agents, you will need to consider the multi-agent design pattern. However, it might not be immediately clear when to switch to multi-agents and what the advantages are.
 
@@ -6,7 +6,7 @@ As soon as you start working on a project that involves multiple agents, you wil
 
 In this lesson, we're looking to answer the following questions:
 
-- What are the scenarios where multi-agents are applicable to?
+- What are the scenarios where multi-agents are applicable?
 - What are the advantages of using multi-agents over just one singular agent doing multiple tasks?
 - What are the building blocks of implementing the multi-agent design pattern?
 - How do we have visibility to how the multiple agents are interacting with each other
@@ -27,7 +27,7 @@ This pattern is widely used in various fields, including robotics, autonomous sy
 
 ## Scenarios Where Multi-Agents Are Applicable
 
-So what scenarios are a good use case for using multi-agents? The answer is that there are many scenarios where employing multiple agents is beneficial especially in the following cases:
+So what scenarios are a good use case for using multi-agents? The answer is that there are many scenarios where employing multiple agents is beneficial, especially in the following cases:
 
 - **Large workloads**: Large workloads can be divided into smaller tasks and assigned to different agents, allowing for parallel processing and faster completion. An example of this is in the case of a large data processing task.
 - **Complex tasks**: Complex tasks, like large workloads, can be broken down into smaller subtasks and assigned to different agents, each specializing in a specific aspect of the task. A good example of this is in the case of autonomous vehicles where different agents manage navigation, obstacle detection, and communication with other vehicles.
@@ -35,9 +35,9 @@ So what scenarios are a good use case for using multi-agents? The answer is that
 
 ## Advantages of Using Multi-Agents Over a Singular Agent
 
-A single agent system could work well for simple tasks, but for more complex tasks, using multiple agents can provide several advantages:
+A single-agent system could work well for simple tasks, but for more complex tasks, using multiple agents can provide several advantages:
 
-- **Specialization**: Each agent can be specialized for a specific task. Lack of specialization in a single agent means you have an agent that can do everything but might get confused on what to do when faced with a complex task. It might for example end up doing a task that it is not best suited for.
+- **Specialization**: Each agent can be specialized for a specific task. Lack of specialization in a single agent means you have an agent that can do everything but might get confused about what to do when faced with a complex task. It might for example end up doing a task that it is not best suited for.
 - **Scalability**: It is easier to scale systems by adding more agents rather than overloading a single agent.
 - **Fault Tolerance**: If one agent fails, others can continue functioning, ensuring system reliability.
 
@@ -139,7 +139,7 @@ These agents can be used by other parts of your business.
 - **Security agent**: This agent represents the security process and is responsible for ensuring the security of the refund process.
 - **Quality agent**: This agent represents the quality process and is responsible for ensuring the quality of the refund process.
 
-There's quite a few agents listed previously both for the specific refund process but also for the general agents that can be used in other parts of your business. Hopefully this gives you an idea on how you can decide on which agents to use in your multi agent system.
+There's quite a few agents listed previously both for the specific refund process but also for the general agents that can be used in other parts of your business. Hopefully this gives you an idea on how you can decide on which agents to use in your multi-agent system.
 
 ## Assignment
 
